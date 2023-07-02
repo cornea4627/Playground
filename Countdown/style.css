@@ -1,0 +1,9 @@
+body {
+    text-align: center;
+}
+
+p {
+    border-style: solid;
+    border-color: red;
+    border-width: 2px;
+}
