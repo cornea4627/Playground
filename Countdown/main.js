@@ -1,5 +1,6 @@
 const main = document.querySelector("main");
-counter = document.createElement("p");
+const counter = document.createElement("p");
+counter.setAttribute("id", "counter")
 main.append(counter);
 
 function updateCounter(){
@@ -19,18 +20,13 @@ function updateCounter(){
         const hours = Math.floor(distance % (1000 *60*60*24)/(1000*60*60))
         const minutes = Math.floor(distance % (1000 *60*60)/(1000*60))
         const seconds = Math.floor(distance % (1000*60)/1000);
-        const milisec = Math.floor(distance % 1000)
-        counter.innerText=`I have been gone for ${year} years, ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds, and ${milisec} milisenconds `;
+        // const milisec = Math.floor(distance % 1000)
+        counter.innerText=`I have been gone for ${year} years, ${days} days, ${hours} hours, ${minutes} minutes, and ${seconds} seconds`;
     } else{
         counter.innerText=`I haven't left yet!!`
 
     }
-    // console.log(year);
-    // console.log(days);
-    // console.log(hours);
-    // console.log(minutes);
-    // console.log(seconds);
-    // console.log(milisec)
+   
 };
 
-setInterval(updateCounter, 1);
+setInterval(updateCounter, 1000);

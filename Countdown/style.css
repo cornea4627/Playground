@@ -2,7 +2,7 @@ body {
     text-align: center;
 }
 
-p {
+[id] {
     border-style: solid;
     border-color: red;
     border-width: 2px;
