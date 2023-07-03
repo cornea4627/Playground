@@ -10,7 +10,12 @@ axios.get('https://api.github.com/users/cornea4627', {
   }
 })
 .then(response => {
-    resultElement.textContent = JSON.stringify(response.data, null, 2);
+    resultElement.textContent = `${JSON.stringify(response.data)}`;
+    let x = (response.data.url);
+    console.log(x);
+    console.log(response.data.url);
+    obj = JSON.parse(response);
+    resultElement.innerHTML= `${obj}`
   })
   .catch(error => {
     console.log(error);
