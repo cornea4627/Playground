@@ -2,8 +2,8 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Organizer App is ready!');
 
     
-    var cardID = 1;
-    var taskID = 0;
+    let cardID = 1;
+    let taskID = 0;
     const main = document.querySelector("main");
     const section = document.createElement('section');
     main.append(section);
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // functions
     
-    const addTodo = function () {
+    const addTodo = () => {
         const todo = document.createElement('div');
         todo.classList.add('card');
         todo.innerHTML = `
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
         addTaskButton.addEventListener('click', function () {
             const taskText = newTaskInput.value.trim();
 
-            if (taskText !="") {
+            if (taskText != "") {
                 const listItem = document.createElement('li');
                 listItem.innerHTML = `
                     <div>
@@ -77,19 +77,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 const removeTaskButton = document.getElementById(`remove-${taskID}`);
                 removeTaskButton.addEventListener(`click`, function () {
                     listItem.remove();
-                });            
+                });
                 newTaskInput.value = '';
                 taskID++;
             };
-        });    
+        });
         cardID++;
     }
-    const addContact = function () {
+    const addContact = () => {
         const contacts = document.createElement('div');
         contacts.innerHTML = `<h1>address book goes here ${cardID} <button id="removeCard${cardID}">Remove Card</button></h1>`;
-        contacts.classList.add('card')
+        contacts.classList.add('card');
         deck.append(contacts);
-        
+
 
 
 
@@ -98,15 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
         removeCardButton.addEventListener(`click`, function () {
             contacts.remove();
         });
-        
+
         cardID++;
     }
-
 });
-
-
-
-
-
-
-
