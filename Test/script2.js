@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     main.append(section);
     section.innerHTML = `
         <button id="addCard">Add a new card</button>
-        <select id="cardTypeSelection">
+        <select>
             <option>To-Do List</option>
             <option>Address Book</option>
             <option>Bookmarks</option>
@@ -17,11 +17,10 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
 
     const addCardButton = document.getElementById('addCard');
-    const cardTypeSelection = document.getElementById('cardTypeSelection');
-    
+
 
     const deck = document.createElement('div');
-    deck.classList.add('deck');
+    deck.classList.add('deck')
     section.append(deck);
 
     
