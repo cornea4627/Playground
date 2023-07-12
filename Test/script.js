@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const section = document.createElement('section');
     main.append(section);
     section.innerHTML = `
-        <button id="addCard">Add a new card</button>
+        <button id="addCardButton">Add a new card</button>
         <select id="cardTypeSelection">
             <option>To-Do List</option>
             <option>Address Book</option>
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </select>
     `;
 
-    const addCardButton = document.getElementById('addCard');
+    const addCardButton = document.getElementById('addCardButton');
     const cardTypeSelection = document.getElementById('cardTypeSelection');
     
 
