@@ -28,19 +28,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
    // add new card
     addCardButton.addEventListener('click', function() {
-        const card = document.createElement('div');
-        card.classList.add('card');
-        card.innerHTML = `
+        if (cardTypeSelection.value === "To-Do List") {
+            addTodo();
+        } else if (cardTypeSelection.value === "Address Book") {
+            addContact();
+        }
+        
+    });
+
+    // functions
+    
+    const addTodo = function () {
+        const todo = document.createElement('div');
+        todo.classList.add('card');
+        todo.innerHTML = `
             <h2>To-Do List ${cardID} <button id="removeCard${cardID}">Remove Card</button></h2>
             <input type="text" id="new-task${cardID}" placeholder="${cardID} New task...">
             <button id ="add-task${cardID}">ADD</button>
             <ul class="classlist${cardID}"></ul>
         `;
-        deck.append(card);
+        deck.append(todo);
 
         const removeCardButton = document.getElementById(`removeCard${cardID}`);
         removeCardButton.addEventListener(`click`, function () {
-            card.remove();
+            todo.remove();
         });
 
 
@@ -71,9 +82,31 @@ document.addEventListener('DOMContentLoaded', function() {
                 taskID++;
             };
         });    
-        cardID = cardID + 1;
-    });
+        cardID++;
+    }
+    const addContact = function () {
+        const contacts = document.createElement('div');
+        contacts.innerHTML = `<h1>address book goes here ${cardID} <button id="removeCard${cardID}">Remove Card</button></h1>`;
+        contacts.classList.add('card')
+        deck.append(contacts);
+        
+
+
+
+
+        const removeCardButton = document.getElementById(`removeCard${cardID}`);
+        removeCardButton.addEventListener(`click`, function () {
+            contacts.remove();
+        });
+        
+        cardID++;
+    }
+
 });
+
+
+
+
 
 
 
