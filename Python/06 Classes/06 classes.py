@@ -3,7 +3,7 @@ class Person:
         self.name = parameter1
         self.age = parameter2
     
-    def enterAtt(self):
+    def enterAttributes(self):
         self.name = input("Please enter your name: ")
         self.age = int(input("Please enter your age: "))
 
@@ -14,7 +14,7 @@ class Person:
         print("Confirmed, your new name is:", self.name)
 
 l= Person("", 0)
-l.enterAtt()
+l.enterAttributes()
 
 if l.age == 1:
     print("My name is", l.name, "and I am", l.age, "year old")
