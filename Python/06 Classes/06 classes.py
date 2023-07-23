@@ -3,13 +3,23 @@ class Person:
         self.name = parameter1
         self.age = parameter2
     
+    def enterAtt(self):
+        self.name = input("Please enter your name: ")
+        self.age = int(input("Please enter your age: "))
+
+    
     def changeName(self):
         newname = input("Please enter your desired name: ")
         self.name = newname
         print("Confirmed, your new name is:", self.name)
 
-l= Person("James", 1)
+l= Person("", 0)
+l.enterAtt()
 
-print("My name is", l.name, "and I am", l.age, "years old")
+if l.age == 1:
+    print("My name is", l.name, "and I am", l.age, "year old")
+else:
+    print("My name is", l.name, "and I am", l.age, "years old")
+
 
 l.changeName()
