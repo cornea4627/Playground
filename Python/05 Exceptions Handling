@@ -1,0 +1,17 @@
+# def divide_numbers(num1, num2):
+#     try:
+#         z = num1/num2
+#         print(z)
+#     except:
+#         print("Try again Please: ")
+#         divide_numbers(10,5)
+
+def usenums():
+    y = input("1st num: ")
+    x = input("secondnum: ")
+    
+usenums()
+print(x)
+
+
+# divide_numbers(10, 0)
