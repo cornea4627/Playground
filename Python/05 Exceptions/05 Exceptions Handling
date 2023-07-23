@@ -1,0 +1,21 @@
+def divide_numbers(num1, num2):
+    try:
+        z = num1/num2
+        print("The answer is:", z)
+    except:
+        print("Try again Please: ")
+        doMath()
+
+def usernum1():
+    y = int(input("1st num: "))
+    return y
+
+def usernum2():
+    x = int(input("2nd num: "))
+    return x
+
+def doMath():
+    divide_numbers(usernum1(), usernum2()) 
+
+print("Enter two numbers, the program will divide the first number by the second one")
+doMath()
