@@ -1,0 +1,9 @@
+# newlist = [x**2 if x == 2 else x for x in range(1,10)]
+# print(newlist)
+
+x = int(input())
+y = int(input())
+z = int(input())
+n = int(input())
+
+newlist = [x, y, z]

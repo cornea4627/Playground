@@ -5,4 +5,4 @@ uncle = {"name": "Rick", "age": 45, "city": "New York"}
 x = json.dumps(uncle)
 print(x)
 
-print(json.loads(uncle))
+print(json.loads(x))
