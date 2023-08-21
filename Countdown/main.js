@@ -7,7 +7,7 @@ function updateCounter(){
 
 
     const now = new Date();
-    const departure= new Date(2023, 6, 1, 18, 11, 0); // (year, month-1, day, hour, minute, second)
+    const departure= new Date(2023, 8, 11, 15, 1, 0); // (year, month-1, day, hour, minute, second)
     // console.log(now);
     // console.log(now.toDateString());
     // console.log(departure.toDateString());
