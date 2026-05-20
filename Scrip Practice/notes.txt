@@ -1,0 +1,29 @@
+GREP
+
+#lines starting with toronto; case insensitive
+# searches in all .xls files in the budgets directory
+    grep -i "toronto" /budgets/*.xls
+
+#lines containing costcenter followed by 334
+#in locations.txt
+    grep "costcenter.*344" locations.txt
+
+#lines starting with YY
+    egrep 'egrep '^Y{2,}' airports.txt
+
+#lines that that contain either a single capital Y or 2 capital Y
+    egrep 'Y{1,2}' airports.txt
+
+TEE #writes output to screen and to file
+
+#writes only to files
+    lsblk --scsi > /scsi_block_devices.txt
+
+#writes to both file and screen
+    lsl --scsi | tee .scsi_block_devices.txt
+
+FIND
+
+#find xls files owned by cblackwell, supress errors from display
+    find / -name "*.xls" -user cblackwell > cblackwell_files.txt 2/dev/null
+
